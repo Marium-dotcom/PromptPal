@@ -24,7 +24,7 @@ export default function Feed() {
     const [searchedValue, setSearchedValue] = useState([]);
   
     async function getPosts(){
-        const response = await fetch('api/prompt', {next : {revalidate: 30}})
+        const response = await fetch('api/prompt', {next : {revalidate: 1}})
         const data = await response.json()
     setPost(data)
       }
