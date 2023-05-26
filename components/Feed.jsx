@@ -1,7 +1,6 @@
-import { useSession } from 'next-auth/react'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import PromptCard from './PromptCard'
+import next from 'next/types'
 
 
 
@@ -20,22 +19,23 @@ import PromptCard from './PromptCard'
 
 export default function Feed() {
 
-    const { data: session } = useSession()
 
     const [post, setPost] = useState([])
     const [searchValue, setSearchValue] = useState();
     const [searchedValue, setSearchedValue] = useState([]);
   
     async function getPosts(){
-        const response = await fetch('api/prompt')
+        const response = await fetch('api/prompt', {next : {revalidate: 30}})
         const data = await response.json()
-    
     setPost(data)
       }
+      console.log(post);
     
+
     
       useEffect(() => {
     getPosts()
+
       }, [])
 
       const handleChange = (event) => {
