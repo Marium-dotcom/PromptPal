@@ -78,16 +78,15 @@ export default function Post() {
 
   return (
 
-    <>
-    {session?.user?.email === 'mariumseyam@gmail.com' || 'maryoma.m98@gmail.com'?
-<>
+    
+
 <Form
     submit={submit}
     setSubmit={setSubmit}
     handleForm={handleForm}
     handleInput={handleInput}
-    ></Form> </> : "null"}
-    </>
+    ></Form> 
+    
    
   )
   

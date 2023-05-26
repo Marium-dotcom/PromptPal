@@ -4,7 +4,6 @@ function MyComponent({ handleForm, submit, handleInput }) {
   return (
     <>
       <h2 className="text-2xl text-blue-600 text-center font-bold mb-4">Create a Prompt</h2>
-
       <form onSubmit={handleForm} className="mx-auto max-w-lg">
         <textarea
           type="text"

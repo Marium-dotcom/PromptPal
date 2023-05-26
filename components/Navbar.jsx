@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
   return (
-<nav className='bg-blue-400 text-black'>
+<nav className='bg-blue-300 py-3 text-blue-800'>
   <div className='flex items-center justify-around '>
     <h2>
  ChatGPT Prompts
@@ -28,24 +28,19 @@ const Navbar = () => {
 
 
 
-    {/* {session?.user?.email === 'mariumseyam@gmail.com'?           <Link href='/CreatePost' className='text-black hover:text-white'>
-            Create Post
-          </Link>  : null
- } */}
-
       {session?.user ? (
         <div className='flex space-x-4  items-center'>
 <div>
-<Link href='/CreatePost' className='text-black hover:text-white'>
+<Link href='/CreatePost' className='text-blue-800 hover:text-white'>
             Create Post
           </Link>
           </div>
 <div>
-          <Link href='/' className='text-black hover:text-white'>
+          <Link href='/' className='text-blue-800 hover:text-white'>
             Feed
           </Link>
 </div>
-          <div onClick={signOut} className='text-black cursor-pointer hover:text-white'>
+          <div onClick={signOut} className='text-blue-800 cursor-pointer hover:text-white'>
             Sign Out
           </div>
 
@@ -69,7 +64,7 @@ const Navbar = () => {
                 onClick={() => {
                   signIn(provider.id);
                 }}
-                className='text-black hover:text-white'
+                className=' border px-2 py-1 rounded bg-red-600 hover:bg-red-800 text-white'
               >
                 Sign in with {provider.name}
               </button>
