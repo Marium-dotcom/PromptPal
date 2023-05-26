@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import PromptCard from './PromptCard'
-import next from 'next/types'
 
 
 
